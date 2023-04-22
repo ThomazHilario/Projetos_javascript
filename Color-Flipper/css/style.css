@@ -1,0 +1,41 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#layout{
+    border: 1px solid black;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgb(36, 36, 36);
+}
+#click{
+    padding: 6px;
+    width: 120px;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.692);
+}
+#painel{
+    margin-top: 10px;
+}
+#texto{
+    font-family: arial;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right,rgb(230, 78, 78),rgb(77, 77, 235));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#layout{
+    border-radius: 20px;
+    height: 150px;
+    width: 500px;
+    background-color: rgb(45, 45, 46);
+    box-shadow: 0px 0px 10px black;
+}
+/* painel */
+#painel > h1{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 10px;
+    color: white;
+}
+/*Buttons*/
+#buttons{
+    width: 340px;
+    margin: auto;
+    margin-top: 10px;
+}
+#buttons > button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 3px;
+    border: 0px;
+    margin: 5px;
+    width: 100px;
+    cursor: pointer;
+    box-shadow: 2px 1px 5px;
+}

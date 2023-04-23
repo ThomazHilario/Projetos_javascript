@@ -3,11 +3,32 @@
     margin: 0;
 }
 body{
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(207, 217, 226);
+}
+#layout{
+
+}
+/*imagem*/
+#imagem{
+    margin: 10px;
+}
+#imagem > img{
+    width: 300px;
+    height: 320px;
+    border-radius: 10px;
+}
+#imagem > p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#imagem > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
 }
 #container{
     border: 2.8px solid;

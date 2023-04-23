@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(207, 217, 226);
+}
+#container{
+    border: 2.8px solid;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 0px 10px;
+}
+#conteudos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+#conteudos > a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 10px 25px 10px 25px;
+    color: black;
+    font-size: 18px;
+    background-color: rgba(119, 119, 119, 0.452);
+}
+#conteudos > a:hover{
+    background-color: rgba(249, 249, 249, 0.777);
+    color: black;
+    transition: 0.7s;
+}
+#conteudos > #his{
+    background-color: white;
+    color: rgb(33, 146, 203);
+}
+/*texto*/
+#texto > #History{
+    width: 270px;
+    text-align: justify;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#texto > #goal{
+    width: 270px;
+    text-align: justify;
+    padding: 10px;
+    display: none;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#texto > #notice{
+    width: 270px;
+    text-align: justify;
+    padding: 10px;
+    display: none;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}

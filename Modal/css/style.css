@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+}
+#click{
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid;
+    background-color: rgb(134, 77, 188);
+    box-shadow: 2px 2px 0px;
+    display: block;
+    margin: auto;
+}
+/*Modal*/
+#modal{
+    border: 1px solid rgba(255, 255, 255, 0.221);
+    height: 250px;
+    width: 450px;
+    box-shadow: 0px 0px 10px;
+    border-radius: 5px;
+    display: none;
+    background-color: rgb(36, 36, 36);
+}
+#modal > h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    border-bottom: 1px solid rgb(132, 127, 127);
+}
+#modal > button{
+    border: 0px;
+    border-radius: 5px;
+    padding: 7px 12px 7px 12px;
+    position: relative;
+    top: 50px;
+    left: 370px;
+    background-color: rgb(190, 39, 39);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    cursor: pointer;
+}
+#modal > p{
+    color: white;
+    opacity: 0.6;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 14px;
+    margin: 20px;
+}

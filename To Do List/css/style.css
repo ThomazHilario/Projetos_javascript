@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/*Layout*/
+#layout{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.774);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px;
+}
+#layout > h1{
+    margin-top: 15px;
+    text-align: center;
+}
+/* Formulario */
+form{
+    width: 320px;
+    margin: auto;
+    margin-top: 20px;
+}
+form > #texto{
+    width: 250px;
+    border: 1px solid rgb(73, 73, 255);
+    outline: 1px solid rgb(73, 73, 255);
+    padding: 2px;
+    padding-left: 7px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+form > #enviar{
+    margin-left: 5px;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: rgb(73, 73, 255);
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*Lista*/
+ul{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    list-style: none;
+}
+ul > li{
+    border: 2px solid;
+    border-radius: 10px;
+    width: 330px;
+    margin: auto;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+/*spans*/
+.remove{
+    float: right;
+    margin: 2px 10px;
+    cursor: pointer;
+    background-image: url(../imagens/icons8-delete-16.png);
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+}

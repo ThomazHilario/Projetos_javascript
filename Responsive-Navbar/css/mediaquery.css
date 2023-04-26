@@ -1,0 +1,66 @@
+@media screen and (min-width:769px) and (max-width:1024px){
+    header{
+        height: 13vh;
+    }
+    header > h1{
+        display: inline-block;
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+    #burguer{
+        display: none;
+    }
+    #menu{
+        display: inline;
+        float: right;
+        padding: 25px;
+        height: 20px;
+    }
+    #menu > a{
+        display: inline;
+    }
+}
+@media screen and (min-width:1025px) and (max-width:1200px){
+    header{
+        height: 13vh;
+    }
+    header > h1{
+        display: inline-block;
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+    #burguer{
+        display: none;
+    }
+    #menu{
+        display: inline;
+        float: right;
+        padding: 25px;
+        height: 20px;
+    }
+    #menu > a{
+        display: inline;
+    }
+}
+@media screen and (min-width:1201px){
+    header{
+        height: 13vh;
+    }
+    header > h1{
+        display: inline-block;
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+    #burguer{
+        display: none;
+    }
+    #menu{
+        display: inline;
+        float: right;
+        padding: 25px;
+        height: 20px;
+    }
+    #menu > a{
+        display: inline;
+    }
+}

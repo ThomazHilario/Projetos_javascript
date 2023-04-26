@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@keyframes animação{
+    0% {height: 0px;}
+}
+/* Header */
+header{
+    background-color: rgb(36, 36, 36);
+}
+header > h1{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+#burguer{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+}
+#menu{
+    margin-top: 10px;
+    height: 140px;
+    display: none;
+    animation-name: animação;
+    animation-duration: 0.7s;
+}
+#menu > a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: block;
+    padding: 5px;
+    margin: 0px 5px
+}
+#menu > a:hover{
+    background-color: rgba(255, 255, 255, 0.067);
+    transition: 0.7s;
+    border-radius: 5px;
+}

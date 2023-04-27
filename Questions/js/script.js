@@ -5,6 +5,7 @@ let textoresposta1 = document.getElementsByClassName('resposta')[1]
 let textoresposta2 = document.getElementsByClassName('resposta')[2]
 
 for(let i = 0;i < iconadd.length;i++){
+    // pergunta 1
     iconadd[0].addEventListener('click',function(){
         textoresposta.style.display = 'block'
         textoresposta1.style.display = 'none'
@@ -19,6 +20,7 @@ for(let i = 0;i < iconadd.length;i++){
         iconadd[2].style.display = 'inline'
         iconremove[2].style.display = 'none'
     })
+    //pergunta 2
     iconadd[1].addEventListener('click',function(){
         textoresposta1.style.display = 'block'
         textoresposta.style.display = 'none'
@@ -34,6 +36,7 @@ for(let i = 0;i < iconadd.length;i++){
         iconremove[2].style.display = 'none'
 
     })
+    //pergunta 3
     iconadd[2].addEventListener('click',function(){
         textoresposta2.style.display = 'block'
         textoresposta.style.display = 'none'

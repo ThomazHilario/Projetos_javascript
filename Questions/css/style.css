@@ -4,8 +4,8 @@
 }
 @keyframes animação{
     0% {height: 100px;}
-    25% {height: 40px;}
-    50% {height: 60px;}
+    25% {height: 50px;}
+    50% {height: 70px;}
     75% {height: 80px;}
 }
 body{
@@ -41,9 +41,11 @@ body{
     display: none;
 }
 .resposta{
+    display: none;
+}
+.texto{
     margin-top: 30px;
     text-align: justify;
-    display: none;
     animation-name: animação;
     animation-duration: 0.4s;
 }

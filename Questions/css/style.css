@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@keyframes animação{
+    0% {height: 100px;}
+    25% {height: 40px;}
+    50% {height: 60px;}
+    75% {height: 80px;}
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(183, 207, 227);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#layout{
+    width: 600px;
+}
+.questions{
+    background-color: rgb(241, 241, 241);
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+.questions > p > span{
+    position: relative;
+    top: 7px;
+    left: 10px;
+    cursor: pointer;
+}
+/* add span*/
+.questions > p > span >img{
+    height: 30px;
+}
+/* Remove span*/
+.questions > p > .remove{
+    display: none;
+}
+.resposta{
+    margin-top: 30px;
+    text-align: justify;
+    display: none;
+    animation-name: animação;
+    animation-duration: 0.4s;
+}

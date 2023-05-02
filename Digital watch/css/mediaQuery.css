@@ -1,0 +1,41 @@
+@media screen and (min-width:481px) and (max-width:768px){
+    #layout{
+        height: 170px;
+        width: 430px;
+    }
+    .relogio{
+        height: 130px;
+        width: 120px;
+    }
+    /* tempo */
+    #horas{
+        font-size: 40px;
+    }
+    #minutos{
+        font-size: 40px;
+    }
+    #segundos{
+        font-size: 40px;
+    }
+}
+@media screen and (min-width:769px){
+    #layout{
+        height: 160px;
+        width: 490px;
+        padding: 20px;
+    }
+    .relogio{
+        height: 150px;
+        width: 140px;
+    }
+    /* tempo */
+    #horas{
+        font-size: 60px;
+    }
+    #minutos{
+        font-size: 60px;
+    }
+    #segundos{
+        font-size: 60px;
+    }
+}

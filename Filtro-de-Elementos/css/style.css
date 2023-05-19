@@ -9,7 +9,7 @@ body{
 /* header */
 header{
     height: 120px;
-    background-color: blue;
+    background-color: rgb(126, 126, 236);
     display: flex;
     justify-content: center;
     align-items: center;

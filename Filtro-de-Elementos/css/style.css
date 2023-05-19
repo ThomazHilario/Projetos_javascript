@@ -11,7 +11,7 @@ header{
     height: 120px;
     background-color: blue;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
 /* form */
@@ -23,12 +23,6 @@ form > #itext{
     width: 180px;
     border-radius: 5px;
     border: 1px solid black;
-}
-form > #click{
-    padding: 5px 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
 }
 /* main */
 
@@ -43,7 +37,10 @@ form > #click{
     border: 1px solid black;
 }
 .cards > .titulo{
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
+    font-size: 18px;
 }
 .cards > .texto{
     text-align: justify;

@@ -1,0 +1,12 @@
+@media screen and (min-width:769px){
+    .colunas{
+        display: block;
+        margin: auto;
+        margin-top: 5px;
+        width: 508px;
+        display: flex;
+    }
+    .cards{
+        display: block;
+    }
+}

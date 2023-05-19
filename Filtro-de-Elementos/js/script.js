@@ -3,18 +3,16 @@ const text = document.getElementById('itext')
 const cards = document.querySelectorAll('.cards')
 /* função do input */
 
-function filterElement(){
+/* adicionando evento ao input */
+text.addEventListener('input',function filterElement(){
     cards.forEach(element => {
         let titulo = element.firstElementChild
         titulo = titulo.textContent.toLowerCase()
         let input_value = text.value.toLowerCase()
-        if(!titulo.includes(input_value)){
-            element.style.display = 'none'
-        }else{
+        if(titulo.includes(input_value)){
             element.style.display = 'block'
+        }else{
+            element.style.display = 'none'
         }
     })
-}
-
-/* adicionando evento ao input */
-text.addEventListener('input',filterElement)
+})

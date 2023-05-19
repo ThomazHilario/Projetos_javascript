@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+}
+/* header */
+header{
+    height: 120px;
+    background-color: blue;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+/* form */
+form{
+    margin: 20px;
+}
+form > #itext{
+    padding: 5px;
+    width: 180px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+form > #click{
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* main */
+
+/* cards */
+.cards{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    height: 230px;
+    width: 230px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.cards > .titulo{
+    text-align: center;
+}
+.cards > .texto{
+    text-align: justify;
+}

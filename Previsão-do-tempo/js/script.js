@@ -6,6 +6,9 @@ const seach = document.getElementById('seach')
 const bandeira = document.getElementById('bandeira')
 const cidade = document.getElementById('cidade')
 const temp = document.getElementById('temperatura')
+const weather_layout = document.getElementById('weather')
+const weather_descrition = document.getElementById('descrição')
+const weatherIcon = document.getElementById('weatherIcon')
 
 /* button event */
 
@@ -36,5 +39,10 @@ async function infor(city){
     /* temperatura */
 
     const temperatura = Math.floor(api.main.temp)
-    temp.textContent = `Temperatura: ${temperatura}°`
+    temp.textContent = `${temperatura}°`
+
+    /* weather icon e description */
+    weather_layout.style.display = 'flex'
+    weather_descrition.textContent = api.weather[0].description
+    weatherIcon.src = `https://openweathermap.org/img/wn/${api.weather[0].icon}.png`
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <input type="text" name="texto" id="itexto">
+            <input type="button" value="Seach" id="seach">
+        </form>
+
+        <div id="img">
+            <img src="" alt="img_pokemon" id="imgPokemon">
+        </div>
+
+        <h1 id="namePokemon"></h1>
+
+        <div id="corpo">
+            <div id="peso">
+                <h1 class="titulo">Weight</h1>
+                <h1 class="texto" id="pesoPoke"></h1>
+            </div>
+            <div id="altura">
+                <h1 class="titulo">Height</h1>
+                <h1 class="texto" id="alturaPoke"></h1>
+            </div>
+        </div>
+
+        <div id="tipo_info">
+            <h1 id="titulo_type">Type:</h1>
+            <h1 id="typePokemon"></h1>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

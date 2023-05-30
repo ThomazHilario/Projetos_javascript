@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    height: 10vh;
+    background-color: rgb(36, 36, 36);
+}
+@keyframes animation_menu {
+    0%{width: 0px;}
+}
+/* menu */
+#burguer{
+    color: white;
+    font-size: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
+#menu{
+    display: none;
+    width: 200px;
+    background-color: rgb(25, 25, 25);
+    height: 88vh;
+    padding: 8px;
+    animation-name: animation_menu;
+    animation-duration: 0.5s;
+}
+#menu > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 0px 30px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+#menu > a:hover{
+    background-color: rgba(240, 248, 255, 0.078);
+    transition: 0.7s;
+}
+#menu > a > span{
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+/* body */
+body{
+    height: 100vh;
+    background-color: rgb(30, 30, 30);
+}

@@ -40,7 +40,7 @@ body{
 /* imagem */
 #img{
     display: block;
-    background-color: blueviolet;
+    background-color: rgba(137, 43, 226, 0.686);
     border-radius: 50%;
     width: 100px;
     height: 100px;

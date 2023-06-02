@@ -53,21 +53,29 @@ ul{
     margin-bottom: 30px;
     list-style: none;
 }
-ul > li{
+ul > div > li{
+    display: inline-block;
     border: 2px solid;
     border-radius: 10px;
-    width: 330px;
+    width: 300px;
     margin: auto;
     padding-left: 10px;
+    margin-left: 5px;
     margin-bottom: 5px;
+    cursor: pointer;
+}
+ul > div{
+    width: 370px;
+    margin: auto;
 }
 /*spans*/
-.remove{
+.delete{
     float: right;
-    margin: 2px 10px;
     cursor: pointer;
-    background-image: url(../imagens/icons8-delete-16.png);
-    height: 20px;
-    width: 20px;
-    background-repeat: no-repeat;
+    border: 0px;
+    background-color: rgb(248, 77, 77);
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 1px;
+    margin-right: 3px;
 }

@@ -34,8 +34,8 @@ async function infor(city){
 
     /* nome da cidade */
 
-    cidade.textContent = `Cidade: ${api.name}
-    `
+    cidade.textContent = `Cidade: ${api.name}`
+    
     /* temperatura */
 
     const temperatura = Math.floor(api.main.temp)

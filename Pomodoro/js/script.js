@@ -3,20 +3,27 @@ const minuteSpan = document.getElementById('min')
 const secondSpan = document.getElementById('sec')
 /* button click */
 const startButton = document.getElementById('click')
+const pauseButton = document.getElementById('pauseClick')
+const resumeButton = document.getElementById('resumeClick')
 
 /* variáveis do pomodoro */
 
 let seconds = 0
 let minutes = 25
-/* Variável responsavel por fazer o loop do pomodoro */
+
+/* Variável responsavel por recomeçar o tempo de 25 minutos */
 let pomoCount = 0
 /* variável responsável por contar a rotação de descanso e volta do pomodoro */
-let pomoStop = 1
+let pomoStop = 0
 
+/* Varriável para verificar se o pomodoro está startado */
+
+let isStart = true
 startButton.addEventListener('click',function(){
      
     let pomodoroTimer = setInterval(function(){
-        // A cada segundo a variável seconds recebe -1
+        if(isStart){
+            // A cada segundo a variável seconds recebe -1
 
         seconds -= 1
 
@@ -46,8 +53,8 @@ startButton.addEventListener('click',function(){
 
         if(pomoStop == 4){
             clearInterval(pomodoroTimer)
-            minuteSpan.innerHTML = minutes
-            secondSpan.innerHTML = seconds
+            minuteSpan.innerHTML = '25'
+            secondSpan.innerHTML = '00'
             pomoStop = 0
         }
 
@@ -55,7 +62,31 @@ startButton.addEventListener('click',function(){
 
         minuteSpan.innerHTML = minutes < 10 ? '0' + minutes : minutes
         secondSpan.innerHTML = seconds < 10 ? '0' + seconds : seconds
+        }
 
     },1000)
 
+    startButton.style.display = 'none'
+    pauseButton.style.display = 'block'
+
+
+    /* event Pause Button */
+    pauseButton.addEventListener('click',isPause)
+
+    /* event resume button */
+
+    resumeButton.addEventListener('click',isResume)
 })
+
+
+function isPause(){
+    isStart = false
+    pauseButton.style.display = 'none'
+    resumeButton.style.display = 'block'
+}
+
+function isResume(){
+    isStart = true
+    resumeButton.style.display = 'none'
+    pauseButton.style.display = 'block'
+}

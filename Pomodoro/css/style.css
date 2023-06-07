@@ -28,7 +28,7 @@ body{
     color: white;
 }
 /* button */
-#click{
+.buttonCss{
     display: block;
     margin: auto;
     padding: 3px 20px;
@@ -36,4 +36,12 @@ body{
     border: 2px solid lightslategrey;
     margin-bottom: 5px;
     cursor: pointer;
+}
+/* Button Pause */
+
+#pauseClick{
+    display:none;
+}
+#resumeClick{
+    display: none;
 }

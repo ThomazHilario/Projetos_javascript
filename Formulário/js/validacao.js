@@ -21,7 +21,7 @@ form.addEventListener('submit',function(event){
     validName(inputName)
     validCamp(inputName,inputEmail,inputPassword)
     /* enviando formulário */
-    if(inputName.value != '' && inputEmail.value != '' && inputPassword.value != '' && inputPassword.value.length > 7){
+    if(inputName.value != '' && inputEmail.value != '' && inputEmail.value.includes('.com') && inputPassword.value != '' && inputPassword.value.length > 7){
         form.submit()
     }
 })
@@ -44,6 +44,9 @@ function validName(inputnome){
 function validEmail(inputemail){
     if(inputemail.value == ''){
         alertaText.textContent = 'Email Inválido'
+        modal.style.display = 'block'
+    }else if(!inputemail.value.includes('.com')){
+        alertaText.textContent = 'Email cadastrado não encontrado'
         modal.style.display = 'block'
     }
 }

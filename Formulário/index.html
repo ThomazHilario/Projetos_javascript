@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formStyle.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div id="container">
+        <form action="cadastro.php" method="get">
+            <div>
+                <label for="inome">Nome Completo</label>
+                <input type="text" name="nome" id="inome">
+            </div>
+            <div>
+                <label for="iemail">Email</label>
+                <input type="email" name="email" id="iemail">
+            </div>
+            <div>
+                <label for="isenha">Senha</label>
+                <input type="password" name="Senha" id="isenha">
+            </div>
+            <div>
+                <input type="submit" value="Cadastrar" id="click">
+            </div>
+        </form>
+    </div>
+    <div id="modal">
+        <span>Nome Inválido</span>
+        <span id="clickModal">X</span>
+    </div>
+    <script src="js/validacao.js"></script>
+</body>
+</html>

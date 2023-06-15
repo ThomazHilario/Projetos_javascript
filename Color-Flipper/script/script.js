@@ -21,7 +21,7 @@ button.addEventListener('click',function(){
 
     //Hexadecimal
 
-    let hex = '#' + base16[Math.floor(Math.random() * base16.length)] + base16[Math.floor(Math.random() * base16.length)] + base16[Math.floor(Math.random() * base16.length)] + base16[Math.floor(Math.random() * base16.length)] + base16[Math.floor(Math.random() * base16.length)] + base16[Math.floor(Math.random() * base16.length)]
+    let hex = `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6,'0')}`
 
     //Sorteando o rgb e o hexadecimal
 

@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-color: rgb(150, 69, 225);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* container */
+#container{
+    background-color: white;
+    width: 350px;
+    height: 90px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+
+/* layoutStepProgress */
+#layoutStepProgress{
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Steps */
+.steps{
+   border: 3px solid rgb(90, 44, 149);
+   padding: 6px 12px;
+   border-radius: 20px;
+   font-weight: normal;
+   font-family: cursive;
+}
+
+/* buttons */
+#layoutButtons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+#layoutButtons > button{
+    padding: 2px 15px;
+    margin: 0px 20px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: rgb(87, 87, 223);
+    font-weight: bold;
+    cursor: pointer;
+}

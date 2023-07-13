@@ -28,11 +28,12 @@ body{
     border-radius: 10px;
     background-color: rgb(40, 40, 40);
     box-shadow: 2px 2px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .relogio > span{
-    display: block;
-    text-align: center;
-    margin-top: 18px;
     color: white;
 }
 /*tempos*/

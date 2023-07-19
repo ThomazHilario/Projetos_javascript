@@ -60,13 +60,27 @@ form.addEventListener('submit',function(e){
     e.preventDefault()
 })
 
+/*  Window Event */
+window.addEventListener('keydown',function(e){
+    let input = inputTexto.value.toLowerCase()
+
+    if(e.key == 'Enter'){
+        getImgPoke(input)
+        getNamePokemon(input)
+        getWightAndHeight(input)
+        getType(input)
+    }
+})
+
 /* button event */
 button.addEventListener('click',function(){
+    let input = inputTexto.value.toLowerCase()
+
     if(inputTexto.value !== ''){
-        getImgPoke(inputTexto.value)
-        getNamePokemon(inputTexto.value)
-        getWightAndHeight(inputTexto.value)
-        getType(inputTexto.value)
+        getImgPoke(input)
+        getNamePokemon(input)
+        getWightAndHeight(input)
+        getType(input)
     }
 })
 

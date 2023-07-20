@@ -1,4 +1,5 @@
-/* inputs */
+/* inputs e o form */
+const form = document.querySelector('form')
 const cidade_input = document.getElementById('icidade')
 const seach = document.getElementById('seach')
 
@@ -10,8 +11,11 @@ const weather_layout = document.getElementById('weather')
 const weather_descrition = document.getElementById('descrição')
 const weatherIcon = document.getElementById('weatherIcon')
 
-/* button event */
-
+// Cancelando o envio do formulário
+form.addEventListener('submit',function(e){
+    e.preventDefault()
+})
+// button event 
 seach.addEventListener('click',function(){
     // Função para pegar a bandeira do pais
     getFlag(cidade_input.value)
@@ -26,6 +30,22 @@ seach.addEventListener('click',function(){
     getWeatherIcon(cidade_input.value)
 })
 
+// window Event
+window.addEventListener('keydown',function(e){
+    if(e.key == 'Enter'){
+        // Função para pegar a bandeira do pais
+        getFlag(cidade_input.value)
+
+        // função para pegar o nome da cidade
+        getNameCity(cidade_input.value)
+
+        // Função para pegar a temperatura da cidade
+        getTemperatureCity(cidade_input.value)
+        
+        // Função para pegar o a previsão do tempo da cidade
+        getWeatherIcon(cidade_input.value)
+    }
+})
 /* api */
 
 function infoApi(city){
@@ -70,3 +90,8 @@ async function getWeatherIcon(city){
     weatherIcon.src = `https://openweathermap.org/img/wn/${apiInfo.weather[0].icon}.png`
 
 }
+
+getFlag('fortaleza')
+getNameCity('fortaleza')
+getTemperatureCity('fortaleza')
+getWeatherIcon('fortaleza')

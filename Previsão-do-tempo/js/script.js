@@ -59,36 +59,49 @@ async function getFlag(city){
     const apiInfo = await infoApi(city)
 
     /* bandeira do pais */
-    bandeira.style.display = 'block'
-    bandeira.src = `https://flagsapi.com/${apiInfo.sys.country}/flat/64.png`
+    try{
+            bandeira.style.display = 'block'
+            bandeira.src = `https://flagsapi.com/${apiInfo.sys.country}/flat/64.png`
+    }catch(e){
+        console.log(e)
+    }
 
 }
 
 async function getNameCity(city){
-    const apiInfo = await infoApi(city)
+    try{
+        const apiInfo = await infoApi(city)
 
-     /* nome da cidade */
-     cidade.textContent = `Cidade: ${apiInfo.name}`
+        /* nome da cidade */
+        cidade.textContent = `Cidade: ${apiInfo.name}`
+    }catch(e){
+        console.log(e)
+    }
 }
 
 async function getTemperatureCity(city){
+    try{
+        const apiInfo = await infoApi(city)
 
-    const apiInfo = await infoApi(city)
-
-    /* Temperatura da cidade */
-    const temperatura = Math.floor(apiInfo.main.temp)
-    temp.innerHTML = `${temperatura}°`
+        /* Temperatura da cidade */
+        const temperatura = Math.floor(apiInfo.main.temp)
+        temp.innerHTML = `${temperatura}°`
+    }catch(e){
+        console.log(e)
+    }
 }
 
 async function getWeatherIcon(city){
+    try{
+        const apiInfo = await infoApi(city)
 
-    const apiInfo = await infoApi(city)
-
-    /* weather icon e description */
-    weather_layout.style.display = 'flex'
-    weather_descrition.innerHTML = apiInfo.weather[0].description
-    weatherIcon.src = `https://openweathermap.org/img/wn/${apiInfo.weather[0].icon}.png`
-
+        /* weather icon e description */
+        weather_layout.style.display = 'flex'
+        weather_descrition.innerHTML = apiInfo.weather[0].description
+        weatherIcon.src = `https://openweathermap.org/img/wn/${apiInfo.weather[0].icon}.png`
+    }catch(e){
+        console.log(e)
+    }
 }
 
 getFlag('fortaleza')

@@ -26,7 +26,9 @@ function getInfoPokemon(pokemon){
 async function getImgPoke(pokemon){
     try{
         const api_info = await getInfoPokemon(pokemon)
-        imgPoke.src = api_info.sprites.front_default
+        if(api_info){
+            imgPoke.src = api_info.sprites.front_default
+        }
     }catch(e){
         console.log(e)
     }
@@ -35,24 +37,42 @@ async function getImgPoke(pokemon){
 /* função nome do pokemon */
 
 async function getNamePokemon(pokemon){
-    const api_info = await getInfoPokemon(pokemon)
-    const name = api_info.name
-    namePoke.innerHTML = name[0].toUpperCase() + name.substring(1)
+    try{
+        const api_info = await getInfoPokemon(pokemon)
+        if(api_info){
+            const name = api_info.name
+            namePoke.innerHTML = name[0].toUpperCase() + name.substring(1)
+        }
+    }catch(e){
+        console.log(e)
+    }
 }
 
 /* função pegando peso e altura do pokemon */
 
 async function getWightAndHeight(pokemon){
-    const api_info = await getInfoPokemon(pokemon)
-    pesoPoke.innerHTML = `${(api_info.weight / 10).toFixed(1)} kg`
-    alturaPoke.innerHTML = `${(api_info.height / 10).toFixed(1)} m`
+    try{
+        const api_info = await getInfoPokemon(pokemon)
+        if(api_info){
+            pesoPoke.innerHTML = `${(api_info.weight / 10).toFixed(1)} kg`
+            alturaPoke.innerHTML = `${(api_info.height / 10).toFixed(1)} m`
+        }
+    }catch(e){
+        console.log(e)
+    }
 }
 
 /* função pegando o tipo do pokemon */
 
 async function getType(pokemon){
-    const api_info = await getInfoPokemon(pokemon)
-    typePoke.innerHTML = api_info.types.map(result => result.type.name[0].toUpperCase() + result.type.name.substring(1)).join('/')
+    try{
+        const api_info = await getInfoPokemon(pokemon)
+        if(api_info){
+            typePoke.innerHTML = api_info.types.map(result => result.type.name[0].toUpperCase() + result.type.name.substring(1)).join('/')
+        }
+    }catch(e){
+        console.log(e)
+    }
 }
 
 /* Cancelando o envio do form */

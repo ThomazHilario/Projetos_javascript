@@ -20,6 +20,11 @@ body{
     border-radius: 10px;
     border: 2px solid white;
     font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 /* form */
 #itexto{
@@ -42,12 +47,10 @@ body{
 }
 /* imagem */
 #img{
-    display: block;
     background-color: rgba(137, 43, 226, 0.686);
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    margin: auto;
     padding: 10px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -56,22 +59,19 @@ body{
     animation-iteration-count: infinite;
 }
 #imgPokemon{
-    display: block;
-    margin: auto;
     height: 100px;
     width: 100px;
 }
 /* texto */
 #namePokemon{
     font-size: 16px;
-    text-align: center;
     color: white;
 }
 /* informações corporal do pokemon */
 #corpo{
+    width: 200px;
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
 }
 .titulo{
     margin-top: 10px;
@@ -91,15 +91,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
 }
 #titulo_type{
     font-size: 16px;
     color: rgb(114, 108, 108);
-    text-align: center;
 }
 #typePokemon{
     font-size: 15px;
     color: white;
-    text-align: center;
 }

@@ -26,9 +26,7 @@ function getInfoPokemon(pokemon){
 async function getImgPoke(pokemon){
     try{
         const api_info = await getInfoPokemon(pokemon)
-        if(api_info){
-            imgPoke.src = api_info.sprites.front_default
-        }
+        imgPoke.src = api_info.sprites.front_default
     }catch(e){
         console.log(e)
     }
@@ -39,10 +37,8 @@ async function getImgPoke(pokemon){
 async function getNamePokemon(pokemon){
     try{
         const api_info = await getInfoPokemon(pokemon)
-        if(api_info){
-            const name = api_info.name
-            namePoke.innerHTML = name[0].toUpperCase() + name.substring(1)
-        }
+        const name = api_info.name
+        namePoke.innerHTML = name[0].toUpperCase() + name.substring(1)
     }catch(e){
         console.log(e)
     }
@@ -53,10 +49,8 @@ async function getNamePokemon(pokemon){
 async function getWightAndHeight(pokemon){
     try{
         const api_info = await getInfoPokemon(pokemon)
-        if(api_info){
-            pesoPoke.innerHTML = `${(api_info.weight / 10).toFixed(1)} kg`
-            alturaPoke.innerHTML = `${(api_info.height / 10).toFixed(1)} m`
-        }
+        pesoPoke.innerHTML = `${(api_info.weight / 10).toFixed(1)} kg`
+        alturaPoke.innerHTML = `${(api_info.height / 10).toFixed(1)} m`
     }catch(e){
         console.log(e)
     }
@@ -67,33 +61,18 @@ async function getWightAndHeight(pokemon){
 async function getType(pokemon){
     try{
         const api_info = await getInfoPokemon(pokemon)
-        if(api_info){
-            typePoke.innerHTML = api_info.types.map(result => result.type.name[0].toUpperCase() + result.type.name.substring(1)).join('/')
-        }
+        typePoke.innerHTML = api_info.types.map(result => result.type.name[0].toUpperCase() + result.type.name.substring(1)).join('/')
     }catch(e){
         console.log(e)
     }
 }
 
-/* Cancelando o envio do form */
-form.addEventListener('submit',function(e){
-    e.preventDefault()
-})
-
-/*  Window Event */
-window.addEventListener('keydown',function(e){
-    let input = inputTexto.value.toLowerCase()
-
-    if(e.key == 'Enter'){
-        getImgPoke(input)
-        getNamePokemon(input)
-        getWightAndHeight(input)
-        getType(input)
-    }
-})
 
 /* button event */
-button.addEventListener('click',function(){
+button.addEventListener('click',function(e){
+    // Parando o formulário
+    e.preventDefault()
+    
     let input = inputTexto.value.toLowerCase()
 
     if(inputTexto.value !== ''){

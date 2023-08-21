@@ -9,6 +9,8 @@ const modal = document.getElementById('modal')
 const alertaText = document.getElementById('alertaModal')
 const exitModalButton = document.getElementById('clickModal')
 
+//Expressão regex para email
+let verifyEmail = new RegExp(/\S+@\S+\.\S+/)
 /* formulário validação */
 
 form.addEventListener('submit',function(event){
@@ -20,10 +22,6 @@ form.addEventListener('submit',function(event){
     validEmail(inputEmail)
     validName(inputName)
     validCamp(inputName,inputEmail,inputPassword)
-    /* enviando formulário */
-    if(inputName.value != '' && inputEmail.value != '' && inputEmail.value.includes('.com') && inputPassword.value != '' && inputPassword.value.length > 7){
-        form.submit()
-    }
 })
 
 /* funções das validações do formulário */
@@ -43,10 +41,10 @@ function validName(inputnome){
 
 function validEmail(inputemail){
     if(inputemail.value == ''){
-        alertaText.textContent = 'Email Inválido'
+        alertaText.textContent = 'Preencha o campo do email'
         modal.style.display = 'block'
-    }else if(!inputemail.value.includes('.com')){
-        alertaText.textContent = 'Email cadastrado não encontrado'
+    }else if(!verifyEmail.test(inputemail.value)){
+        alertaText.textContent = 'Email Inválido'
         modal.style.display = 'block'
     }
 }
@@ -58,6 +56,8 @@ function validPassword(inputPassword){
     }else if(inputPassword.value.length < 8){
         alertaText.textContent = 'Sua senha deve conter 8 dígitos'
         modal.style.display = 'block'
+    } else{
+        form.submit()
     }
 }
 

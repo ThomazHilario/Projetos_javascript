@@ -44,12 +44,12 @@ function createCard(dados:unknown){
 
     // Estrutura do card
     let cardbody:string = `
-    <img src="${user.avatar_url}" class="rounded-full border-2 border-black w-40">
+    <img src="${user.avatar_url}" class="rounded-full border-8 border-purple-700 w-40">
     <p id="nameUsers">${user.name}</p>
-    <div class="flex justify-around gap-5 p-1">
-            <span>${user.followers} Followers</span>
-            <span>${user.following} Following</span>
-            <span>${user.public_repos} Repositories</span>
+    <div class="flex justify-around gap-5 pl-1">
+            <p>${user.followers} Followers</p>
+            <p>${user.following} Following</p>
+            <p>${user.public_repos} Repositories</p>
     </div>
     <p class="text-justify p-5">${user.bio}</p>`
 

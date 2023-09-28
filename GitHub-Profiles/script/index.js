@@ -31,18 +31,29 @@ async function getResponse(nameProfile) {
 function createCard(dados) {
     // Armazenando os dados em uma variável
     let user = dados;
-    // Estrutura do card
-    let cardbody = `
-    <img src="${user.avatar_url}" class="rounded-full border-8 border-purple-700 w-40">
-    <p id="nameUsers">${user.name}</p>
-    <div class="flex justify-around gap-5 pl-1">
-            <p>${user.followers} Followers</p>
-            <p>${user.following} Following</p>
-            <p>${user.public_repos} Repositories</p>
-    </div>
-    <p class="text-justify p-5">${user.bio}</p>`;
-    // jogando o cardBody dentro do card
-    card.innerHTML = cardbody;
-    // mudando o display do card para flex
-    card.style.display = 'flex';
+    // Condição caso tenha a mensagem
+    if (user.message !== 'Not Found') {
+        // Estrutura do card
+        let cardbody = `
+        <img src="${user.avatar_url}" class="rounded-full border-8 border-purple-700 w-40">
+        <p id="nameUsers">${user.name}</p>
+        <div class="flex justify-around gap-5 pl-1">
+                <p>${user.followers} Followers</p>
+                <p>${user.following} Following</p>
+                <p>${user.public_repos} Repositories</p>
+        </div>
+        <p class="text-justify p-5">${user.bio}</p>`;
+        // jogando o cardBody dentro do card
+        card.innerHTML = cardbody;
+        // mudando o display do card para flex
+        card.style.display = 'flex';
+    }
+    else {
+        // Estrutura do card de erro
+        let cardbody = `<p>Usuario não existe!</p>`;
+        // Adicionando a estrutura ao card
+        card.innerHTML = cardbody;
+        // Mudando o display do card para flex
+        card.style.display = 'flex';
+    }
 }

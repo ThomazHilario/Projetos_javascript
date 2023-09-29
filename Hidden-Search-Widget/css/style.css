@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@keyframes animation{
+    0%{width: 0px;}
+}
+@keyframes animationminus{
+    0%{width: -100px}
+}
+body{
+    height: 100vh;
+}
+i{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#texto{
+    transition: 0.7s;
+    outline: 0;
+    animation-name: animation;
+    animation-duration: 0.5s;
+    width: 300px;
+}
